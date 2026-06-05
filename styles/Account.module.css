@@ -1,0 +1,326 @@
+.page {
+  min-height: 100vh;
+  padding-top: 100px;
+  background: var(--cream);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 100px;
+  text-align: center;
+}
+
+.avatar {
+  font-size: 64px;
+  width: 90px;
+  height: 90px;
+  background: var(--green-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.userName {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--green-deep);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.userEmail {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 24px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-mid);
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.navBtn:hover { background: var(--cream); color: var(--green-mid); }
+
+.navActive {
+  background: var(--green-pale) !important;
+  color: var(--green-mid) !important;
+  font-weight: 600 !important;
+}
+
+/* MAIN */
+.section {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--green-deep);
+  margin-bottom: 28px;
+}
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+  margin-bottom: 24px;
+}
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-mid);
+}
+
+.input {
+  padding: 12px 16px;
+  border: 1.5px solid var(--green-light);
+  border-radius: var(--radius-md);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: var(--text-dark);
+  background: var(--cream);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus { border-color: var(--green-mid); background: var(--white); }
+
+/* Orders */
+.orders { display: flex; flex-direction: column; gap: 16px; }
+
+.orderCard {
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  transition: box-shadow 0.2s;
+}
+
+.orderCard:hover { box-shadow: var(--shadow-sm); }
+
+.orderTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.orderId {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green-mid);
+  margin-bottom: 2px;
+}
+
+.orderDate { font-size: 12px; color: var(--text-light); }
+
+.orderRight { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+
+.orderStatus {
+  background: var(--green-pale);
+  color: var(--green-mid);
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.orderTotal {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--green-deep);
+}
+
+.orderItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.orderItem {
+  background: var(--white);
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  color: var(--text-mid);
+  border: 1px solid var(--green-light);
+}
+
+.reorderBtn {
+  background: none;
+  border: 1.5px solid var(--green-light);
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green-mid);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.reorderBtn:hover { background: var(--green-pale); }
+
+/* Addresses */
+.addressCard {
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--text-mid);
+  border: 1.5px solid var(--green-light);
+  max-width: 400px;
+}
+
+.addressTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.addressDefault {
+  background: var(--green-mid);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.addressActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.editBtn, .deleteBtn {
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.editBtn {
+  background: var(--white);
+  border: 1.5px solid var(--green-light);
+  color: var(--green-mid);
+}
+
+.editBtn:hover { background: var(--green-pale); }
+
+.deleteBtn {
+  background: none;
+  border: 1.5px solid #ffc9cc;
+  color: var(--red);
+}
+
+.deleteBtn:hover { background: #ffe8ea; }
+
+/* Settings */
+.settingsGroup {
+  margin-bottom: 32px;
+}
+
+.settingsGroupTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: var(--green-deep);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--green-pale);
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--cream-dark);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-mid);
+}
+
+.toggleInput { accent-color: var(--green-mid); width: 16px; height: 16px; cursor: pointer; }
+
+.dangerBtn {
+  display: block;
+  padding: 11px 20px;
+  background: var(--cream);
+  border: 1.5px solid var(--green-light);
+  border-radius: var(--radius-md);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.dangerBtn:hover { background: var(--cream-dark); }
+
+@media (max-width: 860px) {
+  .container { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+}
